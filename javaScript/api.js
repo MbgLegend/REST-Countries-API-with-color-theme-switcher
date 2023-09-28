@@ -176,6 +176,7 @@ function countryClickEvent(element, country) {
 
 function navigateToDetailPage(country) {
     countrySearch.value = ""
+    generateCountryRandomly("all", '.countries .grid')
     sessionStorage.setItem("Country", country)
 
     window.location.href = "../HTML/country.html"
