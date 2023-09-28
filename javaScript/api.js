@@ -1,6 +1,8 @@
 const countrySearch = document.getElementById("countrySearch")
 const countryAPI = "https://mbglegend.github.io/Country-API/data.json"
 
+const filterClick = document.querySelector(".filter-click")
+
 export async function generateCountryRandomly(amount, container) {
     const countryContainer = document.querySelector(container)
     countryContainer.innerHTML = ""
@@ -199,6 +201,7 @@ function countryClickEvent(element, country) {
 function navigateToDetailPage(country) {
     countrySearch.value = ""
     generateCountryRandomly("all", '.countries .grid')
+    filterClick.innerHTML = `All regions <i class="fa-solid fa-chevron-down"></i>`
     sessionStorage.setItem("Country", country)
 
     window.location.href = "HTML/country.html"
