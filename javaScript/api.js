@@ -1,10 +1,11 @@
 const countrySearch = document.getElementById("countrySearch")
+const countryAPI = "https://mbglegend.github.io/Country-API/data.json"
 
 export async function generateCountryRandomly(amount, container) {
     const countryContainer = document.querySelector(container)
     countryContainer.innerHTML = ""
 
-    const response = await fetch("../data.json")
+    const response = await fetch(countryAPI)
     const data = await response.json()
 
     if (amount === "all") {
@@ -27,7 +28,7 @@ export async function generateByName(name, amount, container) {
     const countryContainer = document.querySelector(container)
     countryContainer.innerHTML = ""
 
-    const response = await fetch("../data.json")
+    const response = await fetch(countryAPI)
     const data = await response.json()
 
     const searchText = name.toLowerCase()
@@ -67,7 +68,7 @@ export async function generateByRegion(region, container) {
     const countryContainer = document.querySelector(container)
     countryContainer.innerHTML = ""
 
-    const response = await fetch("../data.json")
+    const response = await fetch(countryAPI)
     const data = await response.json()
 
     const filteredCountries = data.filter((countryData) => countryData.region === region)
@@ -87,7 +88,7 @@ export async function loadCountryDetailPage(container) {
     const aboutContainer = document.querySelector(container)
     const country = sessionStorage.getItem("Country")
 
-    const response = await fetch("../data.json")
+    const response = await fetch(countryAPI)
     const data = await response.json()
     
     const countryData = data.filter((countryData) => countryData.name === country)
