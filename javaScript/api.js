@@ -102,7 +102,7 @@ export async function loadCountryDetailPage(container) {
     let langauges = ""
 
     if (results.currencies) {
-        currencies = results.currencies.map(currency => currency.name).join(", ")}
+        currencies = results.currencies.map(currency => currency.name).join(", ")
     } else {
         currencies = "No currency"
     }
