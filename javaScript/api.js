@@ -179,5 +179,5 @@ function navigateToDetailPage(country) {
     generateCountryRandomly("all", '.countries .grid')
     sessionStorage.setItem("Country", country)
 
-    window.location.href = "../HTML/country.html"
+    window.location.href = "HTML/country.html"
 }
