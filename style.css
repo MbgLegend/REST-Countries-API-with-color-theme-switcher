@@ -280,6 +280,7 @@ nav .color-scheme .fa-moon {
     .about-country .grid img {
         margin: auto;
         width: 100%;
+        max-width: 600px;
     }
 }
 
