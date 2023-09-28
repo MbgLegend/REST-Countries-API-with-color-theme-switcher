@@ -96,6 +96,28 @@ export async function loadCountryDetailPage(container) {
     const results = countryData[0]
 
     let borders = ""
+    let currencies = ""
+    let langauges = ""
+
+    if (results.currencies) {
+        if (results.borders.length > 1) {
+            currencies = results.currencies.map(currency => currency.name).join(", ")
+        } else {
+            currencies = `${country}`
+        }
+    } else {
+        currencies = "No currency"
+    }
+
+     if (results.langauges) {
+        if (results.langauges.length > 1) {
+            langauges = results.langauges.map(langauges => langauges.name).join(", ")
+        } else {
+            langauges = `${langauges}`
+        }
+    } else {
+        langauges = "No langauges"
+    }
 
     if (results.borders) {
         if (results.borders.length > 1) {
