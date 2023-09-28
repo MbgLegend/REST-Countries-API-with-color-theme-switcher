@@ -161,10 +161,10 @@ export async function loadCountryDetailPage(container) {
                             <b>Top Level Domain:</b> ${results.topLevelDomain[0]}
                         </p>
                         <p>
-                            <b>Currencies:</b> currencies
+                            <b>Currencies:</b> ${currencies}
                         </p>
                         <p>
-                            <b>Languages:</b> langauges
+                            <b>Languages:</b> ${langauges}
                         </p>
                     </div>
                 </div>
