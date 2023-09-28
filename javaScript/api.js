@@ -161,10 +161,10 @@ export async function loadCountryDetailPage(container) {
                             <b>Top Level Domain:</b> ${results.topLevelDomain[0]}
                         </p>
                         <p>
-                            <b>Currencies:</b> ${results.currencies.map(currency => currency.name).join(", ")}
+                            <b>Currencies:</b> currencies
                         </p>
                         <p>
-                            <b>Languages:</b> ${results.languages.map(language => language.name).join(", ")}
+                            <b>Languages:</b> langauges
                         </p>
                     </div>
                 </div>
